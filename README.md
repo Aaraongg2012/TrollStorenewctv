@@ -16,7 +16,7 @@ It works because of an AMFI/CoreTrust bug where iOS does not verify whether or n
 | 15.5 beta 1 - 4 | [TrollHelperOTA (iOS 15+)](./install_trollhelperota_ios15.md) | [TrollHelperOTA (iOS 15+)](./install_trollhelperota_ios15.md) |
 | 15.5 (RC) | Not Supported (CT Bug fixed) | Not Supported (CT Bug fixed) |
 | 15.6 beta 1 - 5 | [SSH Ramdisk](./install_sshrd.md) | [TrollHelperOTA (arm64e)](./install_trollhelperota_arm64e.md) |
-| 15.6 (RC1/2) and above | possible Supported (NEW CT bug) | possible Supported (CT Bug fixed) |
+| 15.6 (RC1/2) and above | possible Support (NEW CT bug) | possible Support (NEW CT bug) |
 
 When the new core trust POC comes out I will add it to trollstore here hopefully it will come out soon.
 
