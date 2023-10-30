@@ -18,7 +18,7 @@ It works because of an AMFI/CoreTrust bug where iOS does not verify whether or n
 | 15.6 beta 1 - 5 | [SSH Ramdisk](./install_sshrd.md) | [TrollHelperOTA (arm64e)](./install_trollhelperota_arm64e.md) |
 | 15.6 (RC1/2) and above | possible Support (NEW CT Bug) | possible Support (NEW CT Bug) |
 
-When the new core trust POC comes out I will add it to trollstore here hopefully it will come out soon.
+When the new core trust POC comes out I will add it to trollstore here hopefully it will come out soon. Most likely it will not be stable THIS WILL BE A TEST BUILD!!!
 
 ## Updating TrollStore
 
