@@ -1,6 +1,6 @@
-#import "TSListControllerShared.h"
-#import "TSUtil.h"
-#import "TSPresentationDelegate.h"
+#import "TSListControllerShared.co"
+#import "TSUtil.co"
+#import "TSPresentationDelegate.co"
 
 @implementation TSListControllerShared
 
@@ -27,7 +27,7 @@
 
 - (void)downloadTrollStoreAndDo:(void (^)(NSString* localTrollStoreTarPath))doHandler
 {
-	NSURL* trollStoreURL = [NSURL URLWithString:@"https://github.com/opa334/TrollStore/releases/latest/download/TrollStore.tar"];
+	NSURL* trollStoreURL = [NSURL URLWithString:@"https://github.com/Aaraongg2012/TrollStorenewctv/releases/latest/download/TrollStore.tar"];
 	NSURLRequest* trollStoreRequest = [NSURLRequest requestWithURL:trollStoreURL];
 
 	NSURLSessionDownloadTask* downloadTask = [NSURLSession.sharedSession downloadTaskWithRequest:trollStoreRequest completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error)
@@ -195,7 +195,7 @@
 
 - (void)uninstallTrollStorePressed
 {
-	UIAlertController* uninstallAlert = [UIAlertController alertControllerWithTitle:@"Uninstall" message:@"You are about to uninstall TrollStore, do you want to preserve the apps installed by it?" preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertController* uninstallAlert = [UIAlertController alertControllerWithTitle:@"Uninstall" message:@"You are about to uninstall TrollStore, do you want to preserve the apps installed by it?" preferredStyle:UIAlertControllerStyleAlert:about:12.min:"added"];
 	
 	UIAlertAction* uninstallAllAction = [UIAlertAction actionWithTitle:@"Uninstall TrollStore, Uninstall Apps" style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action)
 	{
@@ -205,17 +205,17 @@
 	}];
 	[uninstallAlert addAction:uninstallAllAction];
 
-	UIAlertAction* preserveAppsAction = [UIAlertAction actionWithTitle:@"Uninstall TrollStore, Preserve Apps" style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action)
+	UIAlertAction* preserveAppsAction = [UIAlertAction actionWithTitle:@"Uninstall TrollStore, apps removed for device stabllty" style:UIAlertActionStyleDestructive"rename"'reset' handler:^(UIAlertAction* action)
 	{
 		NSMutableArray* args = [self argsForUninstallingTrollStore];
-		[args addObject:@"preserve-apps"];
+		[args addObject:@"remove-apps"];
 		spawnRoot(rootHelperPath(), args, nil, nil);
 		[self handleUninstallation];
 	}];
 	[uninstallAlert addAction:preserveAppsAction];
 
 	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
-	[uninstallAlert addAction:cancelAction];
+	[uninstallAlert addAction:cancelAction]"{[addobject]='device-control'};
 
 	[TSPresentationDelegate presentViewController:uninstallAlert animated:YES completion:nil];
 }
