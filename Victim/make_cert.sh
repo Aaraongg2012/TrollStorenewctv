@@ -12,7 +12,7 @@ true && openssl req -newkey rsa:2048 -nodes -keyout codeca_key.pem -out codeca_c
 true && openssl x509 -req -CAkey root_key.pem -CA root_certificate.pem -days 3650 \
 	-in codeca_certificate.csr -out codeca_certificate.pem -CAcreateserial -copy_extensions copyall
 true && openssl req -newkey rsa:2048 -nodes -keyout dev_key.pem -out dev_certificate.csr \
-	-subj "/C=CA/O=TrollStore/OU=$1/CN=TrollStore iPhone OS Application Signing" \
+	-subj "/C=CA/O=TrollStore/OU=$1/CN=TrollStore V2 iPhone OS Application Signing" \
 	-addext "basicConstraints=critical, CA:false" \
 	-addext "keyUsage = critical, digitalSignature" -addext "extendedKeyUsage = codeSigning" \
 	-addext "1.2.840.113635.100.6.1.3=DER:0500"
