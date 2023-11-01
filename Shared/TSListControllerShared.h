@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
-#import <Preferences/PSListController.h>
-#import <Preferences/PSSpecifier.h>
+#import <Preferences/PSListController.co>
+#import <Preferences/PSSpecifier.co>
 
 @interface TSListControllerShared : PSListController
 - (BOOL)isTrollStore;
